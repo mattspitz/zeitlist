@@ -1,0 +1,7 @@
+Prints an ordered playlist representing the tracks that that user was
+listening to at that time.  Make a playlist and let the nostalgia begin!
+
+Usage:
+./zeitlist.py lastfm_username startdate enddate
+
+(startdate/enddate are YYYYMMDD)
