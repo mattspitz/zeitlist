@@ -3,13 +3,12 @@ import sys
 import time
 
 import pylast
+import simplejson
 
-API_KEY = "b05f38aa68537a48058ec021b83ddb7f"
-API_SECRET = "425b55975eed76058ac220b7b4e8a054"
-
+config = simplejson.load(open("config.json", "r"))
 def get_network_connection():
-    return pylast.LastFMNetwork(api_key=API_KEY, 
-                                api_secret=API_SECRET);
+    return pylast.LastFMNetwork(api_key=config["API_KEY"],
+                                api_secret=config["API_SECRET"]);
 
 def parse_args():
     username, start_date_str, end_date_str = sys.argv[1:4]
